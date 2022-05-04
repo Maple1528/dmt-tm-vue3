@@ -1,0 +1,42 @@
+// flex盒子
+@mixin flex-box($direction:row,$justify-content:center,$align-items:center){
+  display: flex;
+  flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  justify-content: $justify-content;
+  -webkit-justify-content: $justify-content;
+  align-items: $align-items;
+  -webkit-align-items: $align-items;
+}
+
+.flex-center-item{
+  @include flex-box(row, center, center)
+}
+
+.flex-between-center{
+  @include flex-box(row,space-between,center)
+}
+
+.flex-start-start{
+  @include flex-box(row,flex-start,flex-start)
+}
+
+.flex-end-center{
+  @include flex-box(row,flex-end,center)
+}
+
+.flex-column-center-item{
+  @include flex-box(column, center, center)
+}
+
+.flex-column-between-center{
+  @include flex-box(column, space-between, center)
+}
+
+.margin-right-10{
+  margin-right: 10px;
+}
+
+.margin-bottom-20{
+  margin-bottom: 20px;
+}
